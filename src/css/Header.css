@@ -1,0 +1,11 @@
+.header-background{
+  background: whitesmoke;
+}
+.header-title > p{
+  font-size: 3em;
+}
+.header-menu{
+  background: dodgerblue;
+  position: fixed;
+  float: right;
+}
