@@ -10,7 +10,7 @@ function Header() {
       </div>
       <div calssName="header-menu">
         <div className="header-menu-box">
-          box
+          <p>This is menu box</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,8 @@
+.footer-background{
+    background-color: bisque;
+}
+.footer-background > p {
+    text-align: center;
+    margin: 30% 50%;
+    font-size: 2em;
+}
