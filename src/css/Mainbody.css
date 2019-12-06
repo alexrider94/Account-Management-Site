@@ -1,7 +1,9 @@
-.Main-background{
-  background: wheat;
+.main-background{
+  padding-left: 25%;
+  background-color: rgb(255, 247, 247);
+  height: 1500px;
 }
-.Main-content{
-  padding-top: 20em;
-  background: blanchedalmond;
+.main-content{
+
 }
+

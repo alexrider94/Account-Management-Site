@@ -1,8 +1,10 @@
 .footer-background{
-    background-color: bisque;
+    background-color: rgba(68, 59, 59, 0.767);
+    height: 80px;
 }
 .footer-background > p {
+    padding-top: 0.6em;
+    padding-left:7em;
     text-align: center;
-    margin: 30% 50%;
-    font-size: 2em;
+    font-size: 1.7em;
 }

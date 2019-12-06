@@ -1,11 +1,10 @@
 .header-background{
   background: whitesmoke;
+  height: 120px;
 }
 .header-title > p{
+  text-align: center;
+  padding-top: 0.6em;
+  padding-left:7em;
   font-size: 3em;
-}
-.header-menu{
-  background: dodgerblue;
-  position: fixed;
-  float: right;
 }

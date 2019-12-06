@@ -1,0 +1,11 @@
+.sideMenu-background{
+    position: fixed;
+    background-color: rgb(169, 216, 218);
+    height: 100%;
+    overflow-x: hidden;
+    top: 0px;
+    width: 20%;
+    z-index: 0;
+    border-right: 0.8em;
+    box-shadow: 0.2em 0 0.2em  rgb(129, 128, 128);
+}
