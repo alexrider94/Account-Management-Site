@@ -18,11 +18,23 @@ mongoose.connection.on('error', (err) => {
 });
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
-app.get('/api/hello', (req, res)=> {
-    res.send({message: 'hello express!'});
+app.get('/api/hello', (req, res) => {
+    res.send({
+        message: 'hello express!'
+    });
 });
 
-app.listen(port, ()=> console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Listening on port ${port}`));
 
+app.get('/api/user', (req, res) => {
+    res.send([{
+        'id': 1,
+        'userId': 'test',
+        'password': 'test',
+        'nickname': 'testUser'
+    }, ])
+});

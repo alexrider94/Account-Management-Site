@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 
 //화면의 내용 출력
 class App extends React.Component {
-  render(){
+  render() {
     return (
       <div>
         <Header />
