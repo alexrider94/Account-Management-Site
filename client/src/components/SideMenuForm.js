@@ -1,11 +1,18 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import { SignUpPage } from '../pages';
 
 class SideMenuForm extends React.Component {
 
   state = {
     user: ""
+  }
+
+  signUp() {
+    return (
+      <Route path="/signup" component={SignUpPage}></Route>
+    );
   }
 
   componentDidMount() {
@@ -21,7 +28,7 @@ class SideMenuForm extends React.Component {
 
   render() {
     return (
-      <Form>
+      <Form autoComplete="off">
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
@@ -32,12 +39,14 @@ class SideMenuForm extends React.Component {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
         <div className='sideMenu-button'>
-          <Button variant="primary">
-            Sign Up
-          </Button>
+          <Link to="/signup">
+            <Button variant="primary" onClick={this.signUp}>
+              Sign Up
+              </Button>
+          </Link>
           <Button variant="primary">
             Sign In
-          </Button>
+            </Button>
         </div>
       </Form>
     );
