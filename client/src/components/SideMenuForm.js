@@ -1,18 +1,11 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { Link, Route } from 'react-router-dom';
-import { SignUpPage } from '../pages';
+import { Link } from 'react-router-dom';
 
 class SideMenuForm extends React.Component {
 
   state = {
     user: ""
-  }
-
-  signUp() {
-    return (
-      <Route path="/signup" component={SignUpPage}></Route>
-    );
   }
 
   componentDidMount() {
@@ -40,7 +33,7 @@ class SideMenuForm extends React.Component {
         </Form.Group>
         <div className='sideMenu-button'>
           <Link to="/signup">
-            <Button variant="primary" onClick={this.signUp}>
+            <Button variant="primary">
               Sign Up
               </Button>
           </Link>

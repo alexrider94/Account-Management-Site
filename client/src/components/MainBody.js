@@ -5,6 +5,7 @@ import { SignUpPage } from '../pages';
 import { Route } from 'react-router-dom';
 
 class MainBody extends React.Component {
+
   render() {
     return (
       <div className="main-background">

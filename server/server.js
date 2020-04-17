@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
 const url = 'mongodb://localhost:27017/study_group_management';
+const router = require('./router');
+
+
+app.use(require('cors')());
 
 mongoose.connect(process.env.MONGODB_URI || `${url}`);
 
@@ -40,7 +44,4 @@ app.get('/api/user', (req, res) => {
     },])
 });
 
-app.use(async ctx => {
-    // 아무것도 없으면 {} 가 반환됩니다.
-    ctx.body = ctx.request.body;
-});
+app.use('/api', router);
