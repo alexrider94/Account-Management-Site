@@ -35,31 +35,26 @@ createUser = (req, res) => {
         })
 }
 
-// exports.create = async (req) => {
-//     // request body 에서 값들을 추출합니다
-//     const {
-//         email,
-//         password,
-//         name
-//     } = req.body;
+getUser = async (req, res) => {
+    await User.find({}, (err, user) => {
+        if (err) {
+            return res.status(400).json({
+                sucess: false,
+                error: err
+            })
+        }
 
-//     const user = new User({
-//         email,
-//         password,
-//         name
-//     });
+        if (!user) {
+            return res
+                .status(404)
+                .json({ success: false, error: `User not found` })
+        }
 
-//     try {
-//         await user.save();
-//     } catch (e) {
-//         // HTTP 상태 500 와 Internal Error 라는 메시지를 반환하고, 
-//         // 에러를 기록합니다.
-//         return req.throw(500, e);
-//     }
-
-//     req.body = user;
-// }
+        return res.status(200).json({ success: true, data: user })
+    }).catch(err => console.log(err))
+}
 
 module.exports = {
-    createUser
+    createUser,
+    getUser
 }

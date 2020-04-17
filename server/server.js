@@ -36,12 +36,4 @@ app.get('/api/hello', (req, res) => {
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
-app.get('/api/user', (req, res) => {
-    res.send([{
-        'email': 'test',
-        'password': 'test',
-        'name': 'testUser'
-    },])
-});
-
 app.use('/api', router);

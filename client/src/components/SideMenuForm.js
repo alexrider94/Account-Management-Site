@@ -8,16 +8,16 @@ class SideMenuForm extends React.Component {
     user: ""
   }
 
-  componentDidMount() {
-    this.callAPI()
-      .then(res => this.setState({ user: res }))
-  }
+  // componentDidMount() {
+  //   this.callAPI()
+  //     .then(res => this.setState({ user: res }))
+  // }
 
-  callAPI = async () => {
-    const response = await fetch('/api/user');
-    const body = await response.json();
-    return body;
-  }
+  // callAPI = async () => {
+  //   const response = await fetch('/api/user');
+  //   const body = await response.json();
+  //   return body;
+  // }
 
   render() {
     return (

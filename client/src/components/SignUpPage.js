@@ -8,8 +8,7 @@ class SignUpPage extends React.Component {
     state = {
         email: "",
         password: "",
-        name: "",
-        form: "signup",
+        name: ""
     }
 
     handleChange = (e) => {
@@ -20,31 +19,34 @@ class SignUpPage extends React.Component {
         )
     }
 
-    submitSign = (e) => {
-        e.preventDefault(); // page reload prevention
-        this.setState(
-            {
-                email: "",
-                password: "",
-                name: ""
-            }
-        );
+    hanldeGetUser = async () => {
+        await api.getAllUser().then(users => {
+            users = users.data.data
+        })
     }
 
     handleCreatUser = async () => {
         const { email, password, name } = this.state
         const payload = { email, password, name }
 
-        console.log(payload);
+        const Alluser = api.getAllUser();
+        const users = (await Alluser).data.data;
 
+
+        for (var i = 0; i < users.length; ++i) {
+            if (users[i].email === payload.email) {
+                return window.alert("duplicated email");
+            }
+        }
         await api.insertUser(payload).then(res => {
-            alert(`User inserted successfully`);
+            window.alert("register complete!");
             this.setState({
                 name: '',
                 rating: '',
                 time: '',
             })
-        })
+            window.history.back('/');
+        });
     }
 
     render() {
@@ -64,12 +66,16 @@ class SignUpPage extends React.Component {
         const right = {
             float: "right"
         }
-
+        const h1Style = {
+            paddingTop: "5%",
+            textAlign: "center"
+        }
 
         //Browser Auto Complete Block
         //autoComplete = "new-password"
         return (
             <div style={divStyle}>
+                <h3 style={h1Style}>회원가입</h3>
                 <div style={FormStyle}>
                     <Form>
                         <Form.Group as={Row} role="form">

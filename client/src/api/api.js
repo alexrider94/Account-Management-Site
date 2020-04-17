@@ -7,9 +7,12 @@ const api = axios.create({
 
 
 export const insertUser = payload => api.post('/user', payload)
+export const getAllUser = () => api.get('/users')
+
 
 const apis = {
     insertUser,
+    getAllUser
 }
 
 export default apis
