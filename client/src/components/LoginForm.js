@@ -2,22 +2,7 @@ import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-class SideMenuForm extends React.Component {
-
-  state = {
-    user: ""
-  }
-
-  // componentDidMount() {
-  //   this.callAPI()
-  //     .then(res => this.setState({ user: res }))
-  // }
-
-  // callAPI = async () => {
-  //   const response = await fetch('/api/user');
-  //   const body = await response.json();
-  //   return body;
-  // }
+class LoginForm extends React.Component {
 
   render() {
     return (
@@ -46,4 +31,4 @@ class SideMenuForm extends React.Component {
   }
 }
 
-export default SideMenuForm;
+export default LoginForm;

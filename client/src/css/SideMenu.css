@@ -21,3 +21,10 @@
 .sideMenu-button > Button{
     margin: 0.3em;
 }
+
+.menubox{
+    margin: 0.7em;
+    padding: 0.4em;
+    height: 70px;
+    background-color: aliceblue;
+}

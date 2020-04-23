@@ -1,13 +1,17 @@
 import React from 'react';
 import '../css/SideMenu.css';
-import SideMenuForm from './SideMenuForm';
+import LoginForm from './LoginForm';
+import MenuForm from './MenuForm';
 
 class SideMenu extends React.Component {
   render(){
     return(
       <div className="sideMenu-background">
         <div className="userbox">
-          <SideMenuForm/>
+          <LoginForm/>
+        </div>
+        <div className="menubox">
+          <MenuForm/>
         </div>
       </div>
     );
