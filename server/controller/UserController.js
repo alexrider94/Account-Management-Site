@@ -1,6 +1,6 @@
 const User = require('../model/user');
 
-createUser = (req, res) => {
+insertUser = (req, res) => {
     const body = req.body;
 
     if (!body) {
@@ -18,7 +18,6 @@ createUser = (req, res) => {
             error: err
         })
     }
-
     user.save()
         .then(() => {
             return res.status(201).json({
@@ -35,6 +34,7 @@ createUser = (req, res) => {
         })
 }
 
+//////////////////////////////////////////////////////////////////////
 getUser = async (req, res) => {
     await User.find({}, (err, user) => {
         if (err) {
@@ -54,7 +54,26 @@ getUser = async (req, res) => {
     }).catch(err => console.log(err))
 }
 
+getSelectedUser = async (req, res) => {
+    console.log(req.body);
+    await User.findOne({ email: req.body.email, password: req.body.password }, (err, selectedUser) => {
+        if (err) {
+            return res.status(400).json({
+                sucess: false,
+                error: err
+            })
+        }
+        if (!selectedUser) {
+            return res
+                .status(404)
+                .json({ success: false, error: `User not found` })
+        }
+        return res.status(200).json({ sucess: true, data: selectedUser })
+    }).catch(err => console.log(err))
+}
+
 module.exports = {
-    createUser,
-    getUser
+    insertUser,
+    getUser,
+    getSelectedUser
 }
