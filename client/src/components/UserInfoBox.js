@@ -7,13 +7,18 @@ class UserInfoBox extends React.Component {
         email: window.sessionStorage.getItem('email')
     }
 
+    logout() {
+        window.sessionStorage.clear();
+        window.history.go('/');
+    }
+
     render() {
         return (
             <div>
                 <div>
                     Welcome! {this.state.email}
                 </div>
-                <Button className="child" variant="danger">logout</Button>
+                <Button className="child" variant="danger" onClick={this.logout}>logout</Button>
             </div>
         )
     };

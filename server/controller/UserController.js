@@ -55,7 +55,6 @@ getUser = async (req, res) => {
 }
 
 getSelectedUser = async (req, res) => {
-    console.log(req.body);
     await User.findOne({ email: req.body.email, password: req.body.password }, (err, selectedUser) => {
         if (err) {
             return res.status(400).json({

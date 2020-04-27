@@ -32,7 +32,9 @@ class LoginForm extends React.Component {
         password: '',
         name: '',
       })
-      window.history('/');
+      window.history.go('/');
+    }).catch(error => {
+      window.alert("login failed");
     });
 
   }
