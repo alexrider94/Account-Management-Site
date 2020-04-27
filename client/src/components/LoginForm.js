@@ -1,7 +1,8 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import api from '../api/api'
+import api from '../api/api';
+
 
 class LoginForm extends React.Component {
 
@@ -25,11 +26,13 @@ class LoginForm extends React.Component {
 
     await api.getSelectedUser(payload).then(res => {
       window.alert("login complete!");
+      window.sessionStorage.setItem('email', payload.email);
       this.setState({
+        email: '',
+        password: '',
         name: '',
-        rating: '',
-        time: '',
       })
+      window.history('/');
     });
 
   }

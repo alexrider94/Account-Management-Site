@@ -28,3 +28,9 @@
     height: 70px;
     background-color: aliceblue;
 }
+
+.child {
+    float: right;
+    position: relative;
+    bottom: -9em;
+}
