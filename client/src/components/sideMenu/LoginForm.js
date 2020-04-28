@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import api from '../api/api';
+import api from '../../api/api';
 
 
 class LoginForm extends React.Component {
@@ -58,7 +58,7 @@ class LoginForm extends React.Component {
             <Link to="/signup">
               <Button variant="primary">
                 <span id="button-text">
-                  Sign Up
+                  가입
                 </span>
               </Button>
             </Link>
@@ -66,7 +66,7 @@ class LoginForm extends React.Component {
           <div className='col-md-6'>
             <Button variant="primary" onClick={this.handleLoginUser}>
               <span id="button-text">
-                Sign In
+                로그인
               </span>
             </Button>
           </div>

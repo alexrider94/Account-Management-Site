@@ -1,8 +1,7 @@
 import React from 'react';
 import '../css/SideMenu.css';
-import LoginForm from './LoginForm';
-import MenuForm from './MenuForm';
-import UserInfoBox from './UserInfoBox';
+import LoginForm from './sideMenu/LoginForm';
+import UserInfoBox from './sideMenu/UserInfoBox';
 
 class SideMenu extends React.Component {
   constructor(props) {
@@ -56,10 +55,6 @@ class SideMenu extends React.Component {
                 </div>
               )
           }
-        </div>
-
-        <div className="menubox">
-          <MenuForm />
         </div>
       </div>
     );
