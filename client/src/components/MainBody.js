@@ -2,6 +2,8 @@ import React from 'react';
 import '../css/MainBody.css';
 import StudyCard from './StudyCard';
 import { SignUpPage } from '../pages';
+import AddCard from './AddCard';
+import UserInfo from './UserInfo';
 import { Route } from 'react-router-dom';
 
 class MainBody extends React.Component {
@@ -40,7 +42,9 @@ class MainBody extends React.Component {
 
     return (
       <div className="main-background">
-        <Route exact path="/" component={StudyCard} />
+        <Route exact path="/main" component={StudyCard} />
+        <Route path="/userinfo" component={UserInfo} />
+        <Route path="/addcard" component={AddCard} />
         <Route path="/signup" component={SignUpPage} />
       </div>
     );
