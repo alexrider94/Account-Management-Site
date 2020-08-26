@@ -2,18 +2,13 @@ import axios from 'axios';
 
 
 const api = axios.create({
-    baseURL: "http://localhost:5000/api"
+    baseURL: "http://localhost:5557/api"
 })
 
-
-export const insertUser = payload => api.post('/user', payload)
-export const getAllUser = () => api.get('/users')
-export const getSelectedUser = payload => api.post('/selectedUser', payload)
+const insertUser = payload => api.post('/insertUser', payload)
 
 const apis = {
-    insertUser,
-    getAllUser,
-    getSelectedUser
+    insertUser
 }
 
 export default apis

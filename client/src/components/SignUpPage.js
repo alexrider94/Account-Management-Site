@@ -19,32 +19,19 @@ class SignUpPage extends React.Component {
         )
     }
 
-    hanldeGetUser = async () => {
-        await api.getAllUser().then(users => {
-            users = users.data.data
-        })
-    }
-
     handleCreatUser = async () => {
         const { email, password, name } = this.state
         const payload = { email, password, name }
 
-        const Alluser = api.getAllUser();
-        const users = (await Alluser).data.data;
+        console.log("handleCreatUser executed " + email + "  " + password + "  " + name);
 
-
-        for (var i = 0; i < users.length; ++i) {
-            if (users[i].email === payload.email) {
-                return window.alert("duplicated email");
-            }
-        }
         await api.insertUser(payload).then(res => {
             window.alert("register complete!");
             this.setState({
-                name: '',
-                rating: '',
-                time: '',
-            })
+                email: "",
+                password: "",
+                name: ""
+            });
             window.history.back('/');
         });
     }

@@ -10,7 +10,7 @@ class UserInfoBox extends React.Component {
 
     logout() {
         window.sessionStorage.clear();
-        window.location.href="/";
+        window.location.href = "/";
     }
 
     render() {
@@ -18,7 +18,7 @@ class UserInfoBox extends React.Component {
             <div>
                 <div>
                     <b>Welcome!</b>
-                    <h5>{this .state.email} </h5>
+                    <h5>{this.state.email} </h5>
                 </div>
                 <div>
                     <Link to="/addcard">
