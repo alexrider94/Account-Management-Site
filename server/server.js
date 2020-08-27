@@ -4,7 +4,8 @@ const app = express();
 const port = process.env.PORT || 5557;
 const router = require('./router');
 const cors = require('cors');
-
+const logger = require('./log/logger');
+const log = (msg) => logger.info(msg);
 app.use(cors());
 
 //use Body Parser for Json Obeject
@@ -27,4 +28,6 @@ app.use(function (reqest, response, next) {
     return;
 });
 
-app.listen(port, () => console.log(`Listening on port http://localhost:${port}`));
+app.listen(port, () => {
+    log(`Listening on port http://localhost:${port}`);
+});

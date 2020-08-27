@@ -1,0 +1,27 @@
+2020-08-27T14:08:02.883Z [winston-test] info: 
+2020-08-27T14:08:14.434Z [winston-test] info: 
+2020-08-27T14:08:14.554Z [winston-test] error: uncaughtException: log is not a function
+TypeError: log is not a function
+    at Server.app.listen (C:\Users\Ahn\Documents\GitHub\React-Management-Tutorial\server\server.js:32:5)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:198:13)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:832:11)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+2020-08-27T14:08:32.472Z [winston-test] info: Listening on port http://localhost:5557
+2020-08-27T14:09:29.939Z [winston-test] info: Listening on port http://localhost:5557
+2020-08-27T14:12:41.211Z [winston-test] info: test
+2020-08-27T14:13:29.162Z [winston-test] info: 
+2020-08-27T14:13:29.284Z [winston-test] error: uncaughtException: log is not a function
+TypeError: log is not a function
+    at Server.app.listen (C:\Users\Ahn\Documents\GitHub\React-Management-Tutorial\server\server.js:32:5)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:198:13)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:832:11)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+2020-08-27T14:15:21.664Z [winston-test] info: Listening on port http://localhost:5557
