@@ -8,10 +8,17 @@ const compression = require("compression");
 const logger = require("./log/logger");
 const log = (msg) => logger.info(msg);
 const schema = require("./graphql/schema");
-const port = process.env.PORT || 5557;
+const dotenv = require("dotenv");
+dotenv.config();
+
+const port = process.env.PORT || 3001;
 
 const server = new ApolloServer({
   schema,
+
+  context: async (request) => {
+    log(`${JSON.stringify(request)}`);
+  },
 });
 
 app.use(cors());
