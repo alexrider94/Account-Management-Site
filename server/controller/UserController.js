@@ -1,6 +1,6 @@
-const nosql = require('../nosql/nosql');
+const nosql = require('../mongodb/nosql');
 
-insertUser = async (req, res) => {
+insertUserData = async (req, res) => {
     try {
         //console.log(res.req.body);
         const responseData = res.req.body;
@@ -26,10 +26,14 @@ insertUser = async (req, res) => {
 
 }
 
-getUser = async (req, res) => {
+getAllUserData = async (req, res) => {
     try {
         console.log("getUser request");
         const conn = await nosql.mongoConnection();
+
+        const result = conn.collection('user').find({});
+
+        return result;
     } catch (error) {
         console.log(`insertUser error occured ${error}`);
         throw error;
@@ -37,6 +41,6 @@ getUser = async (req, res) => {
 }
 
 module.exports = {
-    insertUser,
-    getUser
+    insertUserData,
+    getAllUserData
 }

@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const UserCtrl = require('./controller/UserController');
+const UserController = require('./controller/UserController');
 
-router.post('/insertUser', UserCtrl.insertUser);
+router.post('/insertUser', UserController.insertUserData);
+router.get('/getUser', UserController.getAllUserData);
 
-router.get('/getUser', UserCtrl.getUser);
+
+
+
 
 module.exports = router;
