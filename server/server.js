@@ -23,6 +23,7 @@ const server = new ApolloServer({
 
 app.use(cors());
 app.use(compression());
+
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
@@ -33,7 +34,6 @@ app.use(
 server.applyMiddleware({ app, path: "/graphql" });
 
 //api 경로 router 설정
-// app.use('/api', router);
 app.use("/api", router);
 
 //Error Handling 404

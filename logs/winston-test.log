@@ -98,3 +98,126 @@ TypeError: graphql is not a function
 2020-09-01T13:44:14.343Z [winston-test] info: GrahpQL Test API at http://localhost:3001/graphql
 2020-09-01T13:44:56.091Z [winston-test] info: Listening on port http://localhost:5557
 2020-09-01T13:44:56.094Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-01T13:48:20.303Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-01T13:48:20.305Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-01T13:48:26.987Z [winston-test] info: [object Object]
+2020-09-01T13:48:27.031Z [winston-test] info: [object Object]
+2020-09-01T13:48:28.425Z [winston-test] info: [object Object]
+2020-09-03T11:38:37.214Z [winston-test] error: uncaughtException: Cannot find module './log/logger'
+Error: Cannot find module './log/logger'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (C:\Users\Ahn\Documents\GitHub\React-Management-Tutorial\server\graphql\resolvers\userResolver.js:1:16)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at relevantPaths.map.path$1 (C:\Users\Ahn\Documents\GitHub\React-Management-Tutorial\node_modules\@graphql-tools\load-files\index.cjs.js:120:98)
+    at Array.map (<anonymous>)
+    at loadFilesSync (C:\Users\Ahn\Documents\GitHub\React-Management-Tutorial\node_modules\@graphql-tools\load-files\index.cjs.js:111:10)
+    at Object.<anonymous> (C:\Users\Ahn\Documents\GitHub\React-Management-Tutorial\server\graphql\resolvers.js:4:24)
+2020-09-03T11:39:06.828Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T11:39:06.830Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T11:39:23.101Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T11:39:23.104Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T11:43:25.290Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T11:43:25.292Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T11:43:37.783Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T11:43:37.785Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T12:02:10.377Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T12:02:10.378Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T12:08:29.149Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T12:08:29.150Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T12:08:37.408Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T12:08:37.410Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T12:47:08.222Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T12:47:08.224Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T12:54:57.231Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T12:54:57.233Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T12:56:51.325Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T12:56:51.327Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:21:04.115Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:21:04.117Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:21:23.845Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:21:23.847Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:23:16.310Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:23:16.311Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:24:10.675Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:24:10.677Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:24:18.451Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:24:18.453Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:24:43.432Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:24:43.433Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:25:02.491Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:25:02.492Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:25:34.002Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:25:34.003Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:25:51.394Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:25:51.395Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:27:25.031Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:27:25.032Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:27:38.848Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:27:38.851Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:28:49.897Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:28:49.898Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:29:51.712Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:29:51.714Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:30:43.628Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:30:43.630Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:36:13.711Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:36:13.712Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:36:34.828Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:36:34.829Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:36:41.679Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:36:41.680Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:38:38.248Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:38:38.250Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:39:34.822Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:39:34.823Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:40:10.740Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:40:10.742Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:40:30.255Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:40:30.257Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:41:24.481Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:41:24.482Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:43:16.019Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:43:16.021Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:43:27.460Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:43:27.461Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:43:43.794Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:43:43.795Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:44:05.231Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:44:05.232Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:44:38.656Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:44:38.658Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:45:35.509Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:45:35.511Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:45:47.370Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:45:47.371Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:48:44.290Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:48:44.292Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:51:21.255Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:51:21.257Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:51:34.803Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:51:34.805Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:51:44.471Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:51:44.473Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:52:46.066Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:52:46.068Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:53:34.204Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:53:34.205Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:56:09.501Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:56:09.502Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:58:28.320Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:58:28.322Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T13:59:56.419Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T13:59:56.421Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T14:00:53.680Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T14:00:53.681Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T14:02:36.785Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T14:02:36.787Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql

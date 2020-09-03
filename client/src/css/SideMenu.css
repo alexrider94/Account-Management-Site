@@ -1,36 +1,33 @@
-.sideMenu-background{
-    position: fixed;
-    background-color: rgb(169, 216, 218);
-    height: 100%;
-    overflow-x: hidden;
-    top: 0px;
-    width: 15em;
-    z-index: 0;
-    border-right: 0.8em;
-    box-shadow: 0.2em 0 0.2em  rgb(129, 128, 128);
+.sideMenu-background {
+  position: fixed;
+  float: inline-start;
+  background-color: rgb(224, 212, 240);
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  box-shadow: 0.2em 0 0.2em rgb(172, 169, 169);
 }
 
-.userbox{
-    height: 230px;
-    margin: 0.7em;
-    padding: 0.4em;
-    background-color: azure;
-    box-shadow: 0.2em 0 0.2em  rgb(129, 128, 128);
+.userbox {
+  height: 230px;
+  margin: 0.7em;
+  padding: 0.4em;
 }
 
-.sideMenu-button > Button{
-    margin: 0.3em;
+.sideMenu-button > Button {
+  margin: 0.3em;
 }
 
-.menubox{
-    margin: 0.7em;
-    padding: 0.4em;
-    height: 70px;
-    background-color: aliceblue;
+.menubox {
+  margin: 0.7em;
+  padding: 0.4em;
+  height: 70px;
+  background-color: aliceblue;
 }
 
 .child {
-    float: right;
-    position: relative;
-    bottom: -9em;
+  float: right;
+  position: relative;
+  bottom: -9em;
 }

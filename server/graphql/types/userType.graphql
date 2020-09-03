@@ -7,4 +7,9 @@ type User {
 
 type Query {
   allUser: [User]
+  insertUser: insertResult
+}
+
+type insertResult {
+  count: Int
 }
