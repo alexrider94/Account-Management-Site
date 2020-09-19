@@ -20,7 +20,7 @@ class SignUpPage extends React.Component {
     const { email, password, name } = this.state;
     const payload = { email, password, name };
 
-    await api.insertUser(payload);
+    await api.register(payload);
   };
 
   render() {

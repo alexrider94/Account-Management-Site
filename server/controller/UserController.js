@@ -1,9 +1,12 @@
+const { response } = require("express");
 const nosql = require("../mongodb/nosql");
+const encrypt = require("../jwt/crypt");
 
-insertUserData = async (req, res) => {
+register = async (req, res) => {
   try {
-    //console.log(res.req.body);
+    console.log(res.req.body);
     const responseData = res.req.body;
+    const password = responseData.password;
     const conn = await nosql.mongoConnection();
 
     try {
@@ -11,11 +14,11 @@ insertUserData = async (req, res) => {
       if (conn) await nosql.mongoDisconnection(conn);
       return;
     } catch (error) {
-      console.log(`insertUser mongo insert occured ${error}`);
+      console.log(`register mongo insert occured ${error}`);
       throw error;
     }
   } catch (error) {
-    console.log(`insertUser connection error occured ${error}`);
+    console.log(`register connection error occured ${error}`);
     throw error;
   }
 };
@@ -51,6 +54,6 @@ login = async (req, res) => {
 };
 
 module.exports = {
-  insertUserData,
+  register,
   login,
 };

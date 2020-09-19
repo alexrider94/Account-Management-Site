@@ -221,3 +221,9 @@ Error: Cannot find module './log/logger'
 2020-09-03T14:00:53.681Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
 2020-09-03T14:02:36.785Z [winston-test] info: Listening on port http://localhost:5557
 2020-09-03T14:02:36.787Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T14:03:20.661Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T14:03:20.663Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-03T14:10:29.041Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-03T14:10:29.043Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T01:51:23.597Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T01:51:23.598Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
