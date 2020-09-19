@@ -227,3 +227,60 @@ Error: Cannot find module './log/logger'
 2020-09-03T14:10:29.043Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
 2020-09-19T01:51:23.597Z [winston-test] info: Listening on port http://localhost:5557
 2020-09-19T01:51:23.598Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T10:59:19.499Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T10:59:19.502Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:01:10.349Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T11:01:10.352Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:01:28.195Z [winston-test] info: encryptPassword error occured
+2020-09-19T11:02:49.278Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T11:02:49.281Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:02:59.763Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T11:02:59.765Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:03:05.106Z [winston-test] info: encryptPassword error occured
+2020-09-19T11:05:05.110Z [winston-test] info: encryptPassword error occured
+2020-09-19T11:05:52.693Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T11:05:52.695Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:06:14.620Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T11:06:14.623Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:06:44.534Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T11:06:44.537Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:06:52.251Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T11:06:52.255Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:10:58.371Z [winston-test] info: Listening on port http://localhost:5557
+2020-09-19T11:10:58.373Z [winston-test] info: GrahpQL Test API at http://localhost:5557/graphql
+2020-09-19T11:13:50.222Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:33:56.104Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:34:28.784Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:34:29.137Z [winston-test] info: find User error is TypeError: conn.collection is not a function
+2020-09-19T11:34:45.618Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:34:49.022Z [winston-test] info: find User error is TypeError: conn.collection is not a function
+2020-09-19T11:34:49.023Z [winston-test] info: register mongo insert occured TypeError: conn.collection is not a function
+2020-09-19T11:34:49.023Z [winston-test] info: register connection error occured TypeError: conn.collection is not a function
+2020-09-19T11:35:06.882Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:35:21.691Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:35:38.076Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:36:53.882Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:36:54.212Z [winston-test] info: data : [object Object]
+2020-09-19T11:36:55.778Z [winston-test] info: data : [object Object]
+2020-09-19T11:37:45.113Z [winston-test] info: data : [object Object]
+2020-09-19T11:38:55.768Z [winston-test] info: data : [object Object]
+2020-09-19T11:39:00.936Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:39:01.371Z [winston-test] info: find User error is TypeError: Converting circular structure to JSON
+2020-09-19T11:39:01.373Z [winston-test] info: register mongo insert occured TypeError: Converting circular structure to JSON
+2020-09-19T11:39:01.373Z [winston-test] info: register connection error occured TypeError: Converting circular structure to JSON
+2020-09-19T11:39:25.088Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:39:31.457Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:40:18.747Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:40:18.963Z [winston-test] info: register mongo insert occured TypeError: Converting circular structure to JSON
+2020-09-19T11:40:18.964Z [winston-test] info: register connection error occured TypeError: Converting circular structure to JSON
+2020-09-19T11:43:09.617Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:43:52.298Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:45:03.665Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:45:28.251Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:45:59.224Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:47:06.612Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:47:49.789Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:48:17.662Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:48:28.073Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:49:01.952Z [winston-test] info: express server start on port http://localhost:5557
+2020-09-19T11:49:26.608Z [winston-test] info: express server start on port http://localhost:5557

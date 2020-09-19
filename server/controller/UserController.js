@@ -1,24 +1,47 @@
-const { response } = require("express");
+
 const nosql = require("../mongodb/nosql");
-const encrypt = require("../jwt/crypt");
+const cryption = require("../jwt/crypt");
+
+const logger = require("../log/logger");
+const log = (msg) => logger.info(msg);
 
 register = async (req, res) => {
   try {
-    console.log(res.req.body);
+    //console.log(res.req.body);
     const responseData = res.req.body;
-    const password = responseData.password;
+    const data = cryption.encryptPassword(responseData.password);
+    //console.log(data);
+    responseData.password = data.password;
+    responseData["salt"] = data.salt;
     const conn = await nosql.mongoConnection();
-
+    let user;
     try {
-      await conn.collection("user").insertOne(responseData);
-      if (conn) await nosql.mongoDisconnection(conn);
-      return;
+      user = await findUser(conn,responseData.email);
+      if(user.length>0){
+        if (conn) await nosql.mongoDisconnection(conn);
+        return new Error("user exist");
+      }
+      else {
+        await conn.collection("user").insertOne(responseData);
+        if (conn) await nosql.mongoDisconnection(conn);
+        return;
+      }
     } catch (error) {
-      console.log(`register mongo insert occured ${error}`);
+      log(`register mongo insert occured ${error}`);
       throw error;
     }
   } catch (error) {
-    console.log(`register connection error occured ${error}`);
+    log(`register connection error occured ${error}`);
+    throw error;
+  }
+};
+
+findUser = async (conn, email) => {
+  try {
+    const result = await conn.collection("user").find({"email":email}).toArray();
+    return result;
+  } catch (error) {
+    log(`find User error is ${error}`);
     throw error;
   }
 };
@@ -48,7 +71,7 @@ login = async (req, res) => {
       result: result,
     });
   } catch (error) {
-    console.log(`insertUser error occured ${error}`);
+    log(`insertUser error occured ${error}`);
     throw error;
   }
 };
