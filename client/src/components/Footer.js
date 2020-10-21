@@ -1,10 +1,9 @@
 import React from 'react';
-import '../css/Footer.css';
 
 class Footer extends React.Component {
-  render(){
+  render() {
     return (
-      <div className="footer-background">
+      <div>
         <p>Copyright by Alexrider94</p>
       </div>
     );

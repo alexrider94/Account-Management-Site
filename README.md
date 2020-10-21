@@ -7,20 +7,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn dev`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
 
 ### REACT STUDY
 Redux - action, dispatch
 Router - Link, BrowserRoute 
 
 ### ETC
+
 ## DATA를 상위 PARENT로 전송방법
 -Router로 연결된 경우 전송 불가
 ## RESTFUL API - axios , fetch
