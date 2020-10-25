@@ -1,13 +1,25 @@
 import React from 'react';
 
-class Footer extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>Copyright by Alexrider94</p>
-      </div>
-    );
-  }
+import { Box,Typography,Link } from '@material-ui/core';
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
 }
 
-export default Footer;
+
+export default function Footer() {
+  return (
+    <Box mt={8}>
+      <Copyright />
+    </Box>
+  );
+}
+

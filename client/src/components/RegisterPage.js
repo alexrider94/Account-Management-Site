@@ -58,8 +58,4 @@ class RegisterPage extends Component {
     }
 }
 
-const mapStateToProps = (response) => ({
-    response
-});
-
-export default connect(mapStateToProps)(RegisterPage);
+export default RegisterPage;
