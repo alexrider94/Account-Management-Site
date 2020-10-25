@@ -1,34 +1,66 @@
-### Management System
-This project for react study
+# Study Group
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+- This project made for React Study
+- Project with REST API method
 
-In the project directory, you can run:
+## Backend-Server
+
+    Node - nodemon
+    Express
+    MongDB - moongose
+    Security - crypto, jsonwebtoken
+    Log - winston
+
+## Frontend-Client
+
+    React - Redux, React-router-dom
+    UI - React-material-ui/cores & icons
+
+### Quick Start
+
+    npm install
+    npm run dev
 
 
-### REACT STUDY
-Redux - action, dispatch
-Router - Link, BrowserRoute 
+### Directory
 
-### ETC
-
-## DATA를 상위 PARENT로 전송방법
--Router로 연결된 경우 전송 불가
-## RESTFUL API - axios , fetch
-# fecth 
-- import를 하지않고 사용할 수 있다.
-- response timeout 제공 x
-- promise base
-# axios
-- fecth에서 사용하지 않는 기능 제공
-## async, await
-
-
-## CORS 문제
-- CORS란 Cross Origin Resource Sharing의 약자로 브라우저의 현재 웹페이지가 이 페이지를 받은 서버가 아닌 다른 서버의 자원을 호출하는 것을 의미합니다
-- client의 port 3000과 server의 port 5000이 다르기때문에 보안상 허용되지 않는 문제.
-# 해결방법 
--npm install cors
--server.js내부에 app.use(require('cors')()); 포함
+    REACT-MANAGEMENT-TUTORIAL
+    ├── README.md
+    ├── node_modules
+    ├── package.json
+    ├── .gitignore
+    ├── logs
+    │   └── winston-test.log
+    ├── client   
+    │   ├── node_modules          
+    │   ├── public
+    │   │   ├── favicon.ico
+    │   │   ├── index.html
+    │   │   └── manifest.json
+    │   └── src
+    │       ├── actions
+    │       ├── api
+    │       ├── components
+    │       ├── containers
+    │       ├── reducers
+    │       ├── store
+    │       ├── utils
+    │       ├── index.js
+    │       └── serviceWorker.js
+    └── server
+        ├── controller
+        │   └── userController.js
+        ├── graphql
+        │   └── nosql.js
+        ├── jwt
+        │   ├── login.js
+        │   └── crypt.js
+        ├── log
+        │   └── logger.js
+        ├── mongodb
+        │   └── nosql.js
+        ├── router.js
+        ├── server.js
+        └── .env
