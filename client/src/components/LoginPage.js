@@ -1,7 +1,9 @@
-import React from 'react';
+import React ,{useRef} from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Grid, CssBaseline, makeStyles,Paper,Avatar,Typography,TextField,Checkbox,FormControlLabel } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import api from '../api/api';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
@@ -34,10 +36,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function LoginPage() {
+  const email = useRef(null);
+  const password = useRef(null);
+
+  const login = (event) => {
+    event.preventDefault();
+    let curEmail = email.current?.value;
+    let curPassword = password.current?.value;
+
+    api.login({mail:curEmail,password:curPassword});
+  }
+  
   const classes = useStyles();
   
   return (
-  <Grid container component="main" className={classes.root}>
+    <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -48,7 +61,10 @@ export default function LoginPage() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form 
+            className={classes.form} 
+            noValidate
+          >
             <TextField
               variant="outlined"
               margin="normal"
@@ -59,6 +75,7 @@ export default function LoginPage() {
               name="email"
               autoComplete="email"
               autoFocus
+              inputRef={email}
             />
             <TextField
               variant="outlined"
@@ -70,6 +87,7 @@ export default function LoginPage() {
               type="password"
               id="password"
               autoComplete="current-password"
+              inputRef={password}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -81,6 +99,7 @@ export default function LoginPage() {
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={login}
             >
               Sign In
             </Button>

@@ -14,8 +14,11 @@ const login = async (payload) => {
   result = await api.post("/login", payload);
 
   console.log("login result " + result);
+
   return result;
 };
+
+
 const apis = {
   register,
   login,

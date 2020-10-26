@@ -50,26 +50,27 @@ login = async (req, res) => {
   let result, conn;
   try {
     const responseData = req.body;
+
     const email = responseData.email;
     const password = responseData.password;
 
     conn = await nosql.mongoConnection();
 
-    result = await conn
-      .collection("user")
-      .find({
+    result = await conn.collection("user").find({
         email: email,
         password: password,
-      })
-      .toArray();
+      }).toArray();
 
     if (conn) await nosql.mongoDisconnection(conn);
-
-    console.log(result);
-
-    return res.json({
-      result: result,
-    });
+    
+    if(result.length > 1){
+      return res.json({
+        result: result,
+      });
+    }
+    else{
+      throw await new Error(`User doens't exist`).message;
+    }
   } catch (error) {
     log(`insertUser error occured ${error}`);
     throw error;

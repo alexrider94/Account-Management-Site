@@ -288,3 +288,34 @@ Error: Cannot find module './log/logger'
 2020-10-21T14:05:39.535Z [winston-test] info: express server start on port http://localhost:5557
 2020-10-25T11:41:36.658Z [winston-test] info: express server start on port http://localhost:5557
 2020-10-25T11:53:04.484Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:36:47.975Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:42:40.131Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:43:05.521Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:44:06.591Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:44:45.545Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:44:47.435Z [winston-test] info: insertUser error occured Error: User doens't exist
+2020-10-26T13:45:15.315Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:45:15.422Z [winston-test] info: insertUser error occured Error: User doens't exist
+2020-10-26T13:45:19.377Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:45:23.102Z [winston-test] info: insertUser error occured Error: User doens't exist
+2020-10-26T13:45:29.482Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:45:29.651Z [winston-test] info: insertUser error occured Error: User doens't exist
+2020-10-26T13:45:41.664Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:46:11.678Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:48:41.718Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:48:46.771Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T13:49:30.406Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:49:30.676Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T13:49:52.606Z [winston-test] info: express server start on port http://localhost:5557
+2020-10-26T13:49:57.098Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T13:51:57.064Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T13:52:04.224Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T13:53:09.870Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T13:55:09.879Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T13:59:31.811Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T13:59:33.977Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T14:00:14.435Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T14:00:27.161Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T14:00:28.877Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T14:00:29.331Z [winston-test] info: insertUser error occured User doens't exist
+2020-10-26T14:00:29.872Z [winston-test] info: insertUser error occured User doens't exist
