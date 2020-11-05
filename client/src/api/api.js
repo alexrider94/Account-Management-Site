@@ -13,6 +13,8 @@ const login = async (payload) => {
   // console.log(`${JSON.stringify(result)}`);
   return result;
 };
+
+
 const apis = {
   register,
   login,

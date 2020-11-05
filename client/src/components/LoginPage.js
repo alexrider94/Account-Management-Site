@@ -4,7 +4,6 @@ import { Button, Grid, CssBaseline, makeStyles, Paper, Avatar, Typography, TextF
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import api from '../api/api';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
@@ -86,7 +85,10 @@ export default function LoginPage(props) {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form
+            className={classes.form}
+            noValidate
+          >
             <TextField
               variant="outlined"
               margin="normal"
