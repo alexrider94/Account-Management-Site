@@ -1,5 +1,5 @@
-const winston = require("winston");
-const appRoot = require("app-root-path");
+import winston from "winston";
+import appRoot from "app-root-path";
 
 const { combine, timestamp, label, printf } = winston.format;
 
@@ -36,12 +36,10 @@ const options = {
   },
 };
 
-let logger = new winston.createLogger({
+export let logger = new winston.createLogger({
   transports: [
     new winston.transports.File(options.file), // 중요! 위에서 선언한 option으로 로그 파일 관리 모듈 transport
     new winston.transports.Console(options.console),
   ],
   exitOnError: false,
 });
-
-module.exports = logger;

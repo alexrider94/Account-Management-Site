@@ -288,3 +288,161 @@ Error: Cannot find module './log/logger'
 2020-10-21T14:05:39.535Z [winston-test] info: express server start on port http://localhost:5557
 2020-10-25T11:41:36.658Z [winston-test] info: express server start on port http://localhost:5557
 2020-10-25T11:53:04.484Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T11:03:24.679Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T11:58:41.760Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T11:59:08.483Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T11:59:14.266Z [winston-test] info: insertUser error occured Error: user doesn't exist
+2020-11-05T11:59:25.667Z [winston-test] info: insertUser error occured Error: user doesn't exist
+2020-11-05T12:00:06.723Z [winston-test] info: insertUser error occured Error: user doesn't exist
+2020-11-05T12:00:47.868Z [winston-test] info: insertUser error occured Error: user doesn't exist
+2020-11-05T12:01:08.185Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:03:01.345Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:03:19.941Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:03:26.778Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:04:05.552Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:04:21.633Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:04:52.324Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:04:52.460Z [winston-test] info: result : 
+2020-11-05T12:04:54.574Z [winston-test] info: result : 
+2020-11-05T12:05:34.608Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:05:34.686Z [winston-test] info: mongo connetion on
+2020-11-05T12:05:34.698Z [winston-test] info: result : 
+2020-11-05T12:05:41.725Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:06:01.904Z [winston-test] info: mongo connetion on
+2020-11-05T12:06:01.915Z [winston-test] info: result : 
+2020-11-05T12:06:01.920Z [winston-test] info: mongo connetion off
+2020-11-05T12:07:51.060Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:07:51.266Z [winston-test] info: mongo connetion on
+2020-11-05T12:07:51.281Z [winston-test] info: result : 
+2020-11-05T12:07:51.286Z [winston-test] info: mongo connetion off
+2020-11-05T12:07:54.889Z [winston-test] info: mongo connetion on
+2020-11-05T12:07:54.895Z [winston-test] info: result : 
+2020-11-05T12:07:54.898Z [winston-test] info: mongo connetion off
+2020-11-05T12:08:13.499Z [winston-test] info: mongo connetion on
+2020-11-05T12:08:13.513Z [winston-test] info: result : 
+2020-11-05T12:08:13.515Z [winston-test] info: mongo connetion off
+2020-11-05T12:08:32.116Z [winston-test] info: mongo connetion on
+2020-11-05T12:08:32.123Z [winston-test] info: result : 
+2020-11-05T12:08:32.125Z [winston-test] info: mongo connetion off
+2020-11-05T12:10:32.119Z [winston-test] info: mongo connetion on
+2020-11-05T12:10:32.126Z [winston-test] info: result : 
+2020-11-05T12:10:32.127Z [winston-test] info: mongo connetion off
+2020-11-05T12:11:35.855Z [winston-test] info: mongo connetion on
+2020-11-05T12:11:35.861Z [winston-test] info: result : 
+2020-11-05T12:11:35.864Z [winston-test] info: mongo connetion off
+2020-11-05T12:12:07.393Z [winston-test] info: mongo connetion on
+2020-11-05T12:12:07.398Z [winston-test] info: result : 
+2020-11-05T12:12:07.399Z [winston-test] info: mongo connetion off
+2020-11-05T12:12:42.498Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:12:42.671Z [winston-test] info: mongo connetion on
+2020-11-05T12:12:42.687Z [winston-test] info: result : 
+2020-11-05T12:12:42.691Z [winston-test] info: mongo connetion off
+2020-11-05T12:12:45.813Z [winston-test] info: mongo connetion on
+2020-11-05T12:12:45.818Z [winston-test] info: result : 
+2020-11-05T12:12:45.819Z [winston-test] info: mongo connetion off
+2020-11-05T12:12:52.976Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:13:54.370Z [winston-test] info: mongo connetion on
+2020-11-05T12:13:54.383Z [winston-test] info: result : 
+2020-11-05T12:13:54.387Z [winston-test] info: mongo connetion off
+2020-11-05T12:14:39.959Z [winston-test] info: mongo connetion on
+2020-11-05T12:14:39.975Z [winston-test] info: result : 
+2020-11-05T12:14:39.976Z [winston-test] info: mongo connetion off
+2020-11-05T12:15:14.835Z [winston-test] info: mongo connetion on
+2020-11-05T12:15:14.855Z [winston-test] info: result : 
+2020-11-05T12:15:14.856Z [winston-test] info: mongo connetion off
+2020-11-05T12:15:35.439Z [winston-test] info: mongo connetion on
+2020-11-05T12:15:35.449Z [winston-test] info: result : 
+2020-11-05T12:15:35.450Z [winston-test] info: mongo connetion off
+2020-11-05T12:15:43.935Z [winston-test] info: mongo connetion on
+2020-11-05T12:15:43.943Z [winston-test] info: result : 
+2020-11-05T12:15:43.945Z [winston-test] info: mongo connetion off
+2020-11-05T12:15:53.934Z [winston-test] info: mongo connetion on
+2020-11-05T12:15:53.944Z [winston-test] info: result : 
+2020-11-05T12:15:53.945Z [winston-test] info: mongo connetion off
+2020-11-05T12:16:06.315Z [winston-test] info: mongo connetion on
+2020-11-05T12:16:06.323Z [winston-test] info: result : 
+2020-11-05T12:16:06.325Z [winston-test] info: mongo connetion off
+2020-11-05T12:16:34.226Z [winston-test] info: mongo connetion on
+2020-11-05T12:16:34.236Z [winston-test] info: result : 
+2020-11-05T12:16:34.237Z [winston-test] info: mongo connetion off
+2020-11-05T12:17:07.256Z [winston-test] info: mongo connetion on
+2020-11-05T12:17:07.261Z [winston-test] info: result : 
+2020-11-05T12:17:07.264Z [winston-test] info: mongo connetion off
+2020-11-05T12:17:19.509Z [winston-test] info: mongo connetion on
+2020-11-05T12:17:19.517Z [winston-test] info: result : 
+2020-11-05T12:17:19.519Z [winston-test] info: mongo connetion off
+2020-11-05T12:17:53.585Z [winston-test] info: mongo connetion on
+2020-11-05T12:17:53.597Z [winston-test] info: result : 
+2020-11-05T12:17:53.598Z [winston-test] info: mongo connetion off
+2020-11-05T12:19:30.196Z [winston-test] info: mongo connetion on
+2020-11-05T12:19:30.201Z [winston-test] info: result : 
+2020-11-05T12:19:30.204Z [winston-test] info: mongo connetion off
+2020-11-05T12:20:44.673Z [winston-test] info: mongo connetion on
+2020-11-05T12:20:44.679Z [winston-test] info: result : 
+2020-11-05T12:20:44.682Z [winston-test] info: mongo connetion off
+2020-11-05T12:21:07.226Z [winston-test] info: mongo connetion on
+2020-11-05T12:21:07.231Z [winston-test] info: result : 
+2020-11-05T12:21:07.232Z [winston-test] info: mongo connetion off
+2020-11-05T12:21:52.475Z [winston-test] info: mongo connetion on
+2020-11-05T12:21:52.484Z [winston-test] info: result : 
+2020-11-05T12:21:52.486Z [winston-test] info: mongo connetion off
+2020-11-05T12:22:19.243Z [winston-test] info: mongo connetion on
+2020-11-05T12:22:19.248Z [winston-test] info: result : 
+2020-11-05T12:22:19.250Z [winston-test] info: mongo connetion off
+2020-11-05T12:23:00.125Z [winston-test] info: mongo connetion on
+2020-11-05T12:23:00.130Z [winston-test] info: result : 
+2020-11-05T12:23:00.133Z [winston-test] info: mongo connetion off
+2020-11-05T12:23:14.916Z [winston-test] info: mongo connetion on
+2020-11-05T12:23:14.921Z [winston-test] info: result : 
+2020-11-05T12:23:14.922Z [winston-test] info: mongo connetion off
+2020-11-05T12:29:52.695Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:30:24.731Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:30:49.763Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:30:52.276Z [winston-test] info: mongo connetion on
+2020-11-05T12:30:52.289Z [winston-test] info: result : 
+2020-11-05T12:30:52.294Z [winston-test] info: mongo connetion off
+2020-11-05T12:31:16.812Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:31:21.191Z [winston-test] info: mongo connetion on
+2020-11-05T12:31:21.205Z [winston-test] info: result : [object Object]
+2020-11-05T12:31:21.210Z [winston-test] info: mongo connetion off
+2020-11-05T12:31:53.555Z [winston-test] info: mongo connetion on
+2020-11-05T12:31:53.563Z [winston-test] info: result : [object Object]
+2020-11-05T12:31:53.564Z [winston-test] info: mongo connetion off
+2020-11-05T12:31:55.864Z [winston-test] info: mongo connetion on
+2020-11-05T12:31:55.870Z [winston-test] info: result : 
+2020-11-05T12:31:55.874Z [winston-test] info: mongo connetion off
+2020-11-05T12:32:00.000Z [winston-test] info: mongo connetion on
+2020-11-05T12:32:00.008Z [winston-test] info: result : [object Object]
+2020-11-05T12:32:00.011Z [winston-test] info: mongo connetion off
+2020-11-05T12:52:20.222Z [winston-test] error: uncaughtException: require is not defined
+ReferenceError: require is not defined
+    at file:///C:/Users/Ahn/Documents/GitHub/React-Management-Tutorial/server/jwt/crypt.js:1:16
+    at ModuleJob.run (internal/modules/esm/module_job.js:139:37)
+    at async Loader.import (internal/modules/esm/loader.js:179:24)
+2020-11-05T12:52:38.719Z [winston-test] error: uncaughtException: require is not defined
+ReferenceError: require is not defined
+    at file:///C:/Users/Ahn/Documents/GitHub/React-Management-Tutorial/server/jwt/crypt.js:2:16
+    at ModuleJob.run (internal/modules/esm/module_job.js:139:37)
+    at async Loader.import (internal/modules/esm/loader.js:179:24)
+2020-11-05T12:52:47.220Z [winston-test] error: uncaughtException: require is not defined
+ReferenceError: require is not defined
+    at file:///C:/Users/Ahn/Documents/GitHub/React-Management-Tutorial/server/jwt/crypt.js:5:16
+    at ModuleJob.run (internal/modules/esm/module_job.js:139:37)
+    at async Loader.import (internal/modules/esm/loader.js:179:24)
+2020-11-05T12:53:22.017Z [winston-test] error: uncaughtException: require is not defined
+ReferenceError: require is not defined
+    at file:///C:/Users/Ahn/Documents/GitHub/React-Management-Tutorial/server/server.js:2:14
+    at ModuleJob.run (internal/modules/esm/module_job.js:139:37)
+    at async Loader.import (internal/modules/esm/loader.js:179:24)
+2020-11-05T12:54:29.382Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:54:40.429Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:54:50.904Z [winston-test] info: insertUser error occured ReferenceError: nosql is not defined
+2020-11-05T12:55:24.827Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:55:24.913Z [winston-test] info: mongo connetion on
+2020-11-05T12:55:24.930Z [winston-test] info: result : [object Object]
+2020-11-05T12:55:24.934Z [winston-test] info: mongo connetion off
+2020-11-05T12:55:28.602Z [winston-test] info: mongo connetion on
+2020-11-05T12:55:28.607Z [winston-test] info: result : [object Object]
+2020-11-05T12:55:28.609Z [winston-test] info: mongo connetion off
+2020-11-05T12:55:34.645Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-05T12:56:21.791Z [winston-test] info: express server start on port http://localhost:5557

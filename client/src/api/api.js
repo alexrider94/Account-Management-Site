@@ -9,11 +9,8 @@ const register = (payload) => {
 };
 
 const login = async (payload) => {
-  let result;
-
-  result = await api.post("/login", payload);
-
-  console.log("login result " + result);
+  const result = await api.post("/login", payload);
+  // console.log(`${JSON.stringify(result)}`);
   return result;
 };
 const apis = {

@@ -1,12 +1,12 @@
-const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
-const router = require("./router");
-const cors = require("cors");
-const compression = require("compression");
-const logger = require("./log/logger");
+import cors from "cors";
+import compression from "compression";
+import { logger } from "./log/logger.js";
+import dotenv from 'dotenv';
+import express from 'express';
+import bodyParser from 'body-parser';
+import { router } from './router.js';
 const log = (msg) => logger.info(msg);
-const dotenv = require("dotenv");
+const app = express();
 dotenv.config();
 
 const port = process.env.PORT || 3001;

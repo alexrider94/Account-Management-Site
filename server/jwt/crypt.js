@@ -1,17 +1,16 @@
-const crypto = require("crypto");
-const dotenv = require("dotenv");
+import crypto from "crypto";
+import dotenv from "dotenv";
+import { logger } from "../log/logger.js";
 dotenv.config();
-
-const logger = require("../log/logger");
 const log = (msg) => logger.info(msg);
 
-/*
- * @parm
- *
- */
-
-module.exports={
-  encryptPassword :(pw) => {
+/**
+* @param {String} pw hashed된 비밀번호
+* @param {Function} callback
+* @return {Obejct}
+* @api public 단방향 - SHA512
+*/
+export const encryptPassword = async (pw) => {
   try {
     const SALT = crypto.randomBytes(16).toString('hex');
     const encrypted = crypto
@@ -27,6 +26,4 @@ module.exports={
     log(`encryptPassword error occured`);
     throw error;
   }
-}
-
 }

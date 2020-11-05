@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Grid, CssBaseline, makeStyles,Paper,Avatar,Typography,TextField,Checkbox,FormControlLabel } from '@material-ui/core';
+import { Button, Grid, CssBaseline, makeStyles, Paper, Avatar, Typography, TextField, Checkbox, FormControlLabel, useFormControl } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import api from '../api/api';
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
@@ -33,11 +36,46 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function LoginPage() {
+const useFormInput = initialValue => {
+  const [value, setValue] = useState(initialValue);
+  const handleChange = e => {
+    setValue(e.target.value);
+  }
+  return {
+    value,
+    onChange: handleChange,
+  }
+}
+
+
+export default function LoginPage(props) {
+  const email = useFormInput('');
+  const password = useFormInput('');
+  let [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  /* handle button click of login form */
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const res = await api.login({ "email": email, "password": password });
+    // console.log(JSON.stringify(res));
+
+    /* error handling */
+    if (typeof (res.data.error) !== "undefined") {
+      setError(res.data.error);
+      return;
+    }
+    else {
+      setError(null);
+
+    }
+    // props.history.push('/dashboard');
+  }
+
   const classes = useStyles();
-  
+
   return (
-  <Grid container component="main" className={classes.root}>
+    <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -59,6 +97,7 @@ export default function LoginPage() {
               name="email"
               autoComplete="email"
               autoFocus
+              {...email}
             />
             <TextField
               variant="outlined"
@@ -70,19 +109,23 @@ export default function LoginPage() {
               type="password"
               id="password"
               autoComplete="current-password"
+              {...password}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+            {error && <><h5 style={{ color: 'red' }}>{error}</h5></>}
             <Button
-              type="submit"
+              type="button"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={handleLogin}
+              disabled={loading}
             >
-              Sign In
+              {loading ? 'Loading...' : 'Sign In'}
             </Button>
             <Grid container>
               <Grid item xs>
