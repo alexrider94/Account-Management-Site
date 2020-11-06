@@ -4,8 +4,9 @@ const api = axios.create({
   baseURL: "http://localhost:5557/api",
 });
 
-const register = (payload) => {
-  api.post("/register", payload);
+const register = async (payload) => {
+  const result = api.post("/register", payload);
+  return result;
 };
 
 const login = async (payload) => {

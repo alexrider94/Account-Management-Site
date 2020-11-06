@@ -1,15 +1,18 @@
 import { mongoConnection, mongoDisconnection } from "../mongodb/nosql.js";
 import { encryptPassword } from '../jwt/crypt.js';
 import { logger } from '../log/logger.js';
-import * as jwt from 'jsonwebtoken';
-
+import jwt from 'jsonwebtoken';
+import { makeSalt } from '../jwt/crypt.js';
+const APP_SECRET = "jWt_(An@d-rAnDO_meS!alt";
 const log = (msg) => logger.info(msg);
 export const register = async (req, res) => {
   try {
-    //console.log(res.req.body);
+    console.log(`response body info is : ${JSON.stringify(res.req.body)}`);
     const responseData = res.req.body;
-    const data = encryptPassword(responseData.password);
-    //console.log(data);
+    const salt = await makeSalt(16);
+    const data = await encryptPassword(responseData.password, salt);
+
+    console.log(`encryptPassword info is : ${JSON.stringify(data)}`);
     responseData.password = data.password;
     responseData["salt"] = data.salt;
     const conn = await mongoConnection();
@@ -18,12 +21,12 @@ export const register = async (req, res) => {
       user = await findUser(conn, responseData.email);
       if (user.length > 0) {
         if (conn) await mongoDisconnection(conn);
-        return new Error("user exist");
+        return res.json({ error: new Error(`user exist`).message });
       }
       else {
         await conn.collection("user").insertOne(responseData);
         if (conn) await mongoDisconnection(conn);
-        return;
+        return res.json({ message: "success" });
       }
     } catch (error) {
       log(`register mongo insert occured ${error}`);
@@ -51,16 +54,17 @@ export const login = async (req, res) => {
     console.log(req.body);
     const responseData = req.body;
     const email = responseData.email.value;
-    const password = responseData.password.value;
 
     conn = await mongoConnection();
 
     const result = await conn.collection("user").find({
-      email: email,
-      password: password,
+      email: email
     }).toArray();
 
-    log(`result : ${result}`);
+    log(`result : ${JSON.stringify(result)}`);
+
+    const data = await encryptPassword(responseData.password.value, result[0].salt);
+
 
     if (conn) await mongoDisconnection(conn);
 
@@ -68,9 +72,18 @@ export const login = async (req, res) => {
       return res.json({ error: new Error(`user doesn't exist`).message });
     }
     else {
-      return res.json({
-        result: result,
-      });
+      if (data.password === result[0].password) {
+        const token = jwt.sign({
+          userInfo: result[0]
+        }, APP_SECRET);
+
+        return res.json({
+          result: token,
+        });
+      }
+      else {
+        return res.json({ error: new Error(`wrong password`).message });
+      }
     }
   } catch (error) {
     log(`insertUser error occured ${error}`);

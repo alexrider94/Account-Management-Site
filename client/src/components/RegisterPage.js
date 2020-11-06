@@ -1,61 +1,166 @@
-import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
+import React, { useState } from 'react';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import api from '../api/api';
 
-import { registerUserAction } from '../actions/authenticationActions';
+const useStyles = makeStyles((theme) => ({
+    paper: {
+        marginTop: theme.spacing(8),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    avatar: {
+        margin: theme.spacing(1),
+        backgroundColor: theme.palette.secondary.main,
+    },
+    form: {
+        width: '100%', // Fix IE 11 issue.
+        marginTop: theme.spacing(3),
+    },
+    submit: {
+        margin: theme.spacing(3, 0, 2),
+    },
+}));
 
-class RegisterPage extends Component {
-    onHandleRegistration = (event) => {
-        event.preventDefault();
-
-        let name = event.target.name.value;
-        let email = event.target.email.value;
-        let password = event.target.password.value;
-
-        const data = {
-            name, email, password
-        };
-
-        this.props.dispatch(registerUserAction(data));
+const useFormInput = initialValue => {
+    const [value, setValue] = useState(initialValue);
+    const handleChange = e => {
+        setValue(e.target.value);
     }
-
-    componentDidMount() {
-        document.title = 'React Login';
-    }
-
-    render() {
-        let message, isSuccess;
-
-        if (this.props.response.register.hasOwnProperty('response')) {
-            isSuccess = this.props.response.register.response.success;
-            message = this.props.response.register.response.message;
-        }
-
-        return (
-            <div>
-                <h3>RegisterPage</h3>
-                {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
-                <form onSubmit={this.onHandleRegistration}>
-                    <div>
-                        <label htmlFor="name">Name</label>
-                        <input type="text" name="name" id="name" />
-                    </div>
-                    <div>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" name="email" id="email" />
-                    </div>
-                    <div>
-                        <label htmlFor="password">Password</label>
-                        <input type="password" name="password" id="password" />
-                    </div>
-                    <div>
-                        <button>Register</button>
-                    </div>
-                </form>
-        Already have account? <Link to='login'>Login here</Link>
-            </div>
-        )
+    return {
+        value,
+        onChange: handleChange,
     }
 }
 
-export default RegisterPage;
+export default function RegisterPage(props) {
+    const classes = useStyles();
+    const email = useFormInput('');
+    const password = useFormInput('');
+    const firstName = useFormInput('');
+    const lastName = useFormInput('');
+    let [error, setError] = useState(null);
+    /* handle register of registerPage Form */
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        const payload = {
+            "email": email.value,
+            "password": password.value,
+            "firstname": firstName.value,
+            "lastname": lastName.value
+        }
+        const res = await api.register(payload);
+        console.log(res);
+        if (typeof (res.data.error) !== "undefined") {
+            setError(res.data.error);
+            return;
+        }
+        else {
+            setError(null);
+            props.history.push('/');
+        }
+    }
+
+    return (
+        <Container component="main" maxWidth="xs">
+            <CssBaseline />
+            <div className={classes.paper}>
+                <Avatar className={classes.avatar}>
+                    <LockOutlinedIcon />
+                </Avatar>
+                <Typography component="h1" variant="h5">
+                    Sign up
+                </Typography>
+                <form className={classes.form} noValidate>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} sm={6}>
+                            <TextField
+                                autoComplete="fname"
+                                name="firstName"
+                                variant="outlined"
+                                required
+                                fullWidth
+                                id="firstName"
+                                label="First Name"
+                                autoFocus
+                                {...firstName}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <TextField
+                                variant="outlined"
+                                required
+                                fullWidth
+                                id="lastName"
+                                label="Last Name"
+                                name="lastName"
+                                autoComplete="lname"
+                                {...lastName}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                variant="outlined"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                {...email}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                variant="outlined"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                                {...password}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <FormControlLabel
+                                control={<Checkbox value="allowExtraEmails" color="primary" />}
+                                label="I want to receive inspiration, marketing promotions and updates via email."
+                            />
+                        </Grid>
+                    </Grid>
+                    {error && <><h5 style={{ color: 'red' }}>{error}</h5></>}
+                    <Button
+                        type="button"
+                        fullWidth
+                        variant="contained"
+                        color="primary"
+                        className={classes.submit}
+                        onClick={handleRegister}
+                    >
+                        Sign Up
+                    </Button>
+                    <Grid container justify="flex-end">
+                        <Grid item>
+                            <Link href="../" variant="body2">
+                                Already have an account? Sign in
+                            </Link>
+                        </Grid>
+                    </Grid>
+                </form>
+            </div>
+        </Container>
+    );
+}

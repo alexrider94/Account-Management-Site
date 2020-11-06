@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Grid, CssBaseline, makeStyles, Paper, Avatar, Typography, TextField, Checkbox, FormControlLabel, useFormControl } from '@material-ui/core';
+import { Button, Grid, CssBaseline, makeStyles, Paper, Avatar, Typography, TextField, Checkbox, FormControlLabel } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import api from '../api/api';
 
@@ -55,6 +55,7 @@ export default function LoginPage(props) {
 
   /* handle button click of login form */
   const handleLogin = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const res = await api.login({ "email": email, "password": password });
     // console.log(JSON.stringify(res));
@@ -62,11 +63,15 @@ export default function LoginPage(props) {
     /* error handling */
     if (typeof (res.data.error) !== "undefined") {
       setError(res.data.error);
+      setLoading(false);
       return;
     }
     else {
       setError(null);
-
+      setLoading(false);
+      console.log(res);
+      props.history.push('/dashboard');
+      return res;
     }
     // props.history.push('/dashboard');
   }
@@ -131,12 +136,12 @@ export default function LoginPage(props) {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link to="#" variant="body2">
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link to="/register" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

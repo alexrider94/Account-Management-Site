@@ -16,7 +16,7 @@ export const mongoConnection = async () => {
             process.env.MONGODB_URI || `${url}`,
             options
         );
-        log(`mongo connetion on`);
+        log(`!!!!!!!! MONGO CONNECTION ON !!!!!!!!!`);
         return connection;
     } catch (error) {
         log(`mongoConnection error occured ${error}`);
@@ -27,7 +27,7 @@ export const mongoConnection = async () => {
 export const mongoDisconnection = async (connection) => {
     try {
         await connection.close();
-        log(`mongo connetion off`);
+        log(`~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~`);
         return;
     } catch (error) {
         log(`mongoDisconnection error occured ${error}`);
