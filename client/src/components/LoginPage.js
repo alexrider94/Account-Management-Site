@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Grid, CssBaseline, makeStyles, Paper, Avatar, Typography, TextField, Checkbox, FormControlLabel } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -69,11 +69,11 @@ export default function LoginPage(props) {
     else {
       setError(null);
       setLoading(false);
-      console.log(res);
+      console.log(res.data.result);
+
       props.history.push('/dashboard');
       return res;
     }
-    // props.history.push('/dashboard');
   }
 
   const classes = useStyles();

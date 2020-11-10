@@ -1,28 +1,31 @@
 import React from 'react';
-import { Header, Footer, LoginPage, RegisterPage } from '../components';
+import { Footer, LoginPage, RegisterPage, DashBoardPage } from '../components';
 import {
     BrowserRouter,
     Route,
-    Switch
+    Switch,
+    Redirect
 } from 'react-router-dom';
+import { UserProvider } from '../contexts/UserContext';
 
-class App extends React.Component {
-    render() {
-        return (
-            <BrowserRouter>
-                <div>
-                    <Header />
-                    <Switch>
+export default function App() {
+    const user = { token: "" };
+
+    return (
+        <BrowserRouter>
+            <div>
+                <Switch>
+                    <UserProvider value={user}>
                         <Route path='/' exact={true} component={LoginPage}></Route>
                         <Route path='/login' exact={true} component={LoginPage}></Route>
+                        <Route path='/dashboard' exact={true} component={DashBoardPage}></Route>
                         <Route path='/register' exact={true} component={RegisterPage}></Route>
-                    </Switch>
-                    <Footer />
-                </div>
-            </BrowserRouter>
+                        <Redirect path="*" to="/" />
+                    </UserProvider>
+                </Switch>
+                <Footer />
+            </div>
+        </BrowserRouter>
 
-        );
-    }
+    );
 }
-
-export default App;

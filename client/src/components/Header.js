@@ -26,7 +26,7 @@ export default function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Study Management Site
+            Management Site
             </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
