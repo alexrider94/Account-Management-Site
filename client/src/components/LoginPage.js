@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button, Grid, CssBaseline, makeStyles, Paper, Avatar, Typography, TextField, Checkbox, FormControlLabel } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import api from '../api/api';
+import { UserContext } from '../contexts/Context';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,7 +53,7 @@ export default function LoginPage(props) {
   const password = useFormInput('');
   let [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const { dispatch } = useContext(UserContext);
   /* handle button click of login form */
   const handleLogin = async (e) => {
     setLoading(true);
@@ -69,10 +70,7 @@ export default function LoginPage(props) {
     else {
       setError(null);
       setLoading(false);
-      console.log(res.data.result);
-
-      props.history.push('/dashboard');
-      return res;
+      await dispatch({ type: "LOGIN", payload: res });
     }
   }
 

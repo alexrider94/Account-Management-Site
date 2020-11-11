@@ -6,26 +6,24 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom';
-import { UserProvider } from '../contexts/UserContext';
-
+import { UserContext } from '../contexts/Context';
+import { userInitialState, userReducer } from '../reducer/UserReducer';
 export default function App() {
-    const user = { token: "" };
-
+    const [state, dispatch] = React.useReducer(userReducer, userInitialState)
     return (
         <BrowserRouter>
             <div>
-                <Switch>
-                    <UserProvider value={user}>
-                        <Route path='/' exact={true} component={LoginPage}></Route>
+                <UserContext.Provider value={{ state, dispatch }}>
+                    <Switch>
+                        <Route path='/' exact={true} render={() => state.isAuthenticated ? (<DashBoardPage></DashBoardPage>) : (<LoginPage></LoginPage>)}></Route>
                         <Route path='/login' exact={true} component={LoginPage}></Route>
                         <Route path='/dashboard' exact={true} component={DashBoardPage}></Route>
                         <Route path='/register' exact={true} component={RegisterPage}></Route>
                         <Redirect path="*" to="/" />
-                    </UserProvider>
-                </Switch>
-                <Footer />
+                    </Switch>
+                    <Footer />
+                </UserContext.Provider>
             </div>
         </BrowserRouter>
-
     );
 }

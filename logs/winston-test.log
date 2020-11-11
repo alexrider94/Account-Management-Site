@@ -614,3 +614,25 @@ ReferenceError: require is not defined
 2020-11-10T14:12:55.506Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
 2020-11-10T14:12:55.518Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
 2020-11-10T14:12:55.596Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
+2020-11-10T14:23:36.577Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
+2020-11-10T14:23:36.582Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
+2020-11-10T14:23:36.663Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
+2020-11-10T14:23:45.425Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
+2020-11-10T14:23:45.432Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
+2020-11-10T14:23:45.512Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
+2020-11-11T12:53:40.388Z [winston-test] info: express server start on port http://localhost:5557
+2020-11-11T14:12:25.165Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
+2020-11-11T14:12:25.192Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
+2020-11-11T14:12:25.272Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
+2020-11-11T14:18:27.391Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
+2020-11-11T14:18:27.400Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
+2020-11-11T14:18:27.483Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
+2020-11-11T14:18:50.211Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
+2020-11-11T14:18:50.230Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
+2020-11-11T14:18:50.309Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
+2020-11-11T14:19:52.981Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
+2020-11-11T14:19:52.987Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
+2020-11-11T14:19:53.068Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
+2020-11-11T14:20:30.482Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
+2020-11-11T14:20:30.489Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
+2020-11-11T14:20:30.571Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
