@@ -48,6 +48,19 @@ export const findUser = async (conn, email) => {
   }
 };
 
+export const authCheck = async (req, res) => {
+  try {
+    const token = req.body.token;
+    const result = await jwt.verify(token, APP_SECRET);
+    return res.json({
+      result: result,
+    });
+  } catch (error) {
+    log(`authCheck error is ${error}`);
+    throw error;
+  }
+}
+
 export const login = async (req, res) => {
   let conn;
   try {

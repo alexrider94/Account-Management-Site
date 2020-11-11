@@ -3,7 +3,7 @@ export const userReducer = (state, action) => {
         case "LOGIN":
             console.log(action);
             localStorage.setItem("user", JSON.stringify(action.payload.user));
-            localStorage.setItem("token", JSON.stringify(action.payload.data.result));
+            localStorage.setItem("token", JSON.stringify(action.payload.token));
             return {
                 ...state,
                 isAuthenticated: true,

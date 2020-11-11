@@ -14,10 +14,15 @@ const login = async (payload) => {
   return result;
 };
 
+const authCheck = async (payload) => {
+  const result = await api.post("/authCheck", payload);
+  return result;
+}
 
 const apis = {
   register,
   login,
+  authCheck,
 };
 
 export default apis;

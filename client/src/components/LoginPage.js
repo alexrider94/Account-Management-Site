@@ -70,7 +70,10 @@ export default function LoginPage(props) {
     else {
       setError(null);
       setLoading(false);
-      await dispatch({ type: "LOGIN", payload: res });
+      console.log(res);
+      const userInfo = await api.authCheck({ "token": res.data.result });
+
+      await dispatch({ type: "LOGIN", payload: { "token": res.data.result, "user": userInfo.data.result } });
     }
   }
 
