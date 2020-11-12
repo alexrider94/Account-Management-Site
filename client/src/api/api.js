@@ -16,6 +16,9 @@ const login = async (payload) => {
 
 const authCheck = async (payload) => {
   const result = await api.post("/authCheck", payload);
+  if (typeof result.data.result === "undefined") {
+    return new Error(`no authCheck`);
+  }
   return result;
 }
 

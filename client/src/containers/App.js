@@ -10,6 +10,9 @@ import { UserContext } from '../contexts/Context';
 import { userInitialState, userReducer } from '../reducer/UserReducer';
 export default function App() {
     const [state, dispatch] = React.useReducer(userReducer, userInitialState)
+    if (localStorage.getItem('token')) {
+        state.isAuthenticated = true;
+    }
     return (
         <BrowserRouter>
             <div>
@@ -19,7 +22,7 @@ export default function App() {
                         <Route path='/login' exact={true} component={LoginPage}></Route>
                         <Route path='/dashboard' exact={true} component={DashBoardPage}></Route>
                         <Route path='/register' exact={true} component={RegisterPage}></Route>
-                        <Redirect path="*" to="/" />
+                        <Redirect to="/" />
                     </Switch>
                     <Footer />
                 </UserContext.Provider>

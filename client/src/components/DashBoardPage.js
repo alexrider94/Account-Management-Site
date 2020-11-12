@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -9,7 +9,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
+import { Grid, Typography, Button } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -17,6 +17,7 @@ import { mainListItems, secondaryListItems } from './ListItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import { UserContext } from '../contexts/Context';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -96,9 +97,13 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 240,
   },
+  logoutButton: {
+    display: 'flex',
+  }
 }));
 
 export default function DashboardPage() {
+  const { dispatch } = useContext(UserContext);
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -107,6 +112,11 @@ export default function DashboardPage() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const logout = () => {
+    dispatch({ type: "LOGOUT" });
+  }
+
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
@@ -123,6 +133,9 @@ export default function DashboardPage() {
           >
             <MenuIcon />
           </IconButton>
+          <Button color="inherit" variant="outlined" className={classes.logoutButton} onClick={logout}>
+            Logout
+          </Button>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -133,6 +146,9 @@ export default function DashboardPage() {
         open={open}
       >
         <div className={classes.toolbarIcon}>
+          <Typography variant="h6" className={classes.title}>
+            Management Site
+            </Typography>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>
