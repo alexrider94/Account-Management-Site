@@ -10,6 +10,8 @@ export const userReducer = (state, action) => {
                 user: action.payload.user,
                 token: action.payload.token
             };
+        case "ACCOUNT":
+            localStorage.setItem("code", JSON.stringify(action.payload.accountCode));
         case "LOGOUT":
             localStorage.clear();
             return {

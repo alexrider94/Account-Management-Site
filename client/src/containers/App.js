@@ -20,9 +20,7 @@ export default function App() {
                     <Switch>
                         <Route path='/' exact={true} render={() => state.isAuthenticated ? (<DashBoardPage></DashBoardPage>) : (<LoginPage></LoginPage>)}></Route>
                         <Route path='/login' exact={true} component={LoginPage}></Route>
-                        <Route path='/dashboard' exact={true} component={DashBoardPage}></Route>
                         <Route path='/register' exact={true} component={RegisterPage}></Route>
-                        <Redirect to="/" />
                     </Switch>
                     <Footer />
                 </UserContext.Provider>

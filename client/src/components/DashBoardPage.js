@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -107,10 +108,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function DashboardPage() {
+export default function DashboardPage(props) {
   const { dispatch } = useContext(UserContext);
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
+  const [checkToken, setToken] = React.useState(false);
+  const [accountToken, getAccountToken] = React.useState("");
+  let location = useLocation();
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -124,9 +128,26 @@ export default function DashboardPage() {
 
   const getAuthAccount = async () => {
     const url = await api.openBankAuth();
-    const options = 'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
-    window.open(url, "인증", options);
+    window.location.href = url;
   }
+
+  useEffect(() => {
+    if (location.search !== "") {
+      if (typeof location.search.split("=")[1].split("&")[0] !== "undefined") {
+        getAccountToken(location.search.split("=")[1].split("&")[0]);
+        setToken(true);
+
+        localStorage.setItem("code", accountToken);
+        window.history.href = ""
+      }
+    }
+    else {
+      setToken(false);
+      localStorage.removeItem("code");
+    }
+  })
+
+
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
@@ -146,9 +167,9 @@ export default function DashboardPage() {
           <Button color="inherit" variant="outlined" className={classes.logoutButton} onClick={logout}>
             Logout
           </Button>
-          <Button color="inherit" variant="outlined" className={classes.accountAuthButton} onClick={getAuthAccount}>
+          {checkToken ? <div></div> : <Button color="inherit" variant="outlined" className={classes.accountAuthButton} onClick={getAuthAccount}>
             Link Account
-          </Button>
+          </Button>}
         </Toolbar>
       </AppBar>
       <Drawer
