@@ -74,6 +74,7 @@ export default function LoginPage(props) {
       const userInfo = await api.authCheck({ "token": res.data.result });
 
       await dispatch({ type: "LOGIN", payload: { "token": res.data.result, "user": userInfo.data.result } });
+      return;
     }
   }
 

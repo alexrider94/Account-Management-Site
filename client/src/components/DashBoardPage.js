@@ -18,6 +18,8 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 import { UserContext } from '../contexts/Context';
+import api from '../api/api';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -98,7 +100,10 @@ const useStyles = makeStyles((theme) => ({
     height: 240,
   },
   logoutButton: {
-    display: 'flex',
+    textAlign: 'right'
+  },
+  accountAuthButton: {
+    marginLeft: 30
   }
 }));
 
@@ -117,6 +122,11 @@ export default function DashboardPage() {
     dispatch({ type: "LOGOUT" });
   }
 
+  const getAuthAccount = async () => {
+    const url = await api.openBankAuth();
+    const options = 'top=10, left=10, width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
+    window.open(url, "인증", options);
+  }
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
@@ -135,6 +145,9 @@ export default function DashboardPage() {
           </IconButton>
           <Button color="inherit" variant="outlined" className={classes.logoutButton} onClick={logout}>
             Logout
+          </Button>
+          <Button color="inherit" variant="outlined" className={classes.accountAuthButton} onClick={getAuthAccount}>
+            Link Account
           </Button>
         </Toolbar>
       </AppBar>
