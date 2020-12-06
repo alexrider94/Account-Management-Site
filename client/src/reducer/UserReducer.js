@@ -12,6 +12,7 @@ export const userReducer = (state, action) => {
             };
         case "ACCOUNT":
             localStorage.setItem("code", JSON.stringify(action.payload.accountCode));
+            break;
         case "LOGOUT":
             localStorage.clear();
             return {

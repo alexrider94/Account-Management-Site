@@ -28,7 +28,7 @@ export default function Deposits() {
             <div>
                 <Link color="primary" href="#" onClick={preventDefault}>
                     View balance
-        </Link>
+                </Link>
             </div>
         </React.Fragment>
     );

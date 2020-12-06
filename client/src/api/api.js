@@ -22,16 +22,11 @@ const authCheck = async (payload) => {
   return result;
 }
 
-const openBankAuth = async () => {
-  const result = await api.get("/accountAuth");
-  return result.data;
-}
 
 const apis = {
   register,
   login,
   authCheck,
-  openBankAuth
 };
 
 export default apis;

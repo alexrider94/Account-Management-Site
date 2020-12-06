@@ -4,7 +4,6 @@ import {
     BrowserRouter,
     Route,
     Switch,
-    Redirect
 } from 'react-router-dom';
 import { UserContext } from '../contexts/Context';
 import { userInitialState, userReducer } from '../reducer/UserReducer';

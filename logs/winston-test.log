@@ -847,3 +847,19 @@ ReferenceError: require is not defined
 2020-11-22T14:12:13.466Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
 2020-11-22T14:12:13.475Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
 2020-11-22T14:12:13.553Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~
+2020-12-06T13:06:10.491Z [winston-test] info: express server start on port http://localhost:5557
+2020-12-06T14:06:54.993Z [winston-test] error: uncaughtException: accountAuth is not defined
+ReferenceError: accountAuth is not defined
+    at file:///C:/Users/Ahn/Documents/GitHub/React-Management-Tutorial/server/router.js:12:28
+    at ModuleJob.run (internal/modules/esm/module_job.js:139:37)
+    at async Loader.import (internal/modules/esm/loader.js:179:24)
+2020-12-06T14:07:41.833Z [winston-test] error: uncaughtException: accountAuth is not defined
+ReferenceError: accountAuth is not defined
+    at file:///C:/Users/Ahn/Documents/GitHub/React-Management-Tutorial/server/router.js:12:28
+    at ModuleJob.run (internal/modules/esm/module_job.js:139:37)
+    at async Loader.import (internal/modules/esm/loader.js:179:24)
+2020-12-06T14:07:49.418Z [winston-test] info: express server start on port http://localhost:5557
+2020-12-06T14:07:54.835Z [winston-test] info: express server start on port http://localhost:5557
+2020-12-06T14:11:24.716Z [winston-test] info: !!!!!!!! MONGO CONNECTION ON !!!!!!!!!
+2020-12-06T14:11:24.850Z [winston-test] info: result : [{"_id":"5fa5595e15759b465427a318","email":"phila1@naver.com","password":"1d241749f7c68f78e0c1193235c66ba63f3a6e4fae760676b08fbdcbfd1465334f7b96a251c6bff74d15bbcfd14d9bdc76ae7915709f9757b96f419841cece2b","firstname":"a","lastname":"b","salt":"b34532113236dbc016d97346be7333b0"}]
+2020-12-06T14:11:24.931Z [winston-test] info: ~~~~~~~ MONGO CONNECTION OFF ~~~~~~~~

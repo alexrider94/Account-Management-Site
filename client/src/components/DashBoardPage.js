@@ -15,9 +15,9 @@ import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { mainListItems, secondaryListItems } from './ListItems';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+import Chart from './bankcomponents/BankGraph';
+import Deposits from './bankcomponents/BankWallet';
+import Orders from './bankcomponents/BankOrders';
 import { UserContext } from '../contexts/Context';
 import api from '../api/api';
 
@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 240,
+    height: 360,
   },
   logoutButton: {
     textAlign: 'right'
@@ -112,9 +112,7 @@ export default function DashboardPage(props) {
   const { dispatch } = useContext(UserContext);
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
-  const [checkToken, setToken] = React.useState(false);
-  const [accountToken, getAccountToken] = React.useState("");
-  let location = useLocation();
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -126,33 +124,12 @@ export default function DashboardPage(props) {
     dispatch({ type: "LOGOUT" });
   }
 
-  const getAuthAccount = async () => {
-    const url = await api.openBankAuth();
-    window.location.href = url;
-  }
-
-  useEffect(() => {
-    if (location.search !== "") {
-      if (typeof location.search.split("=")[1].split("&")[0] !== "undefined") {
-        getAccountToken(location.search.split("=")[1].split("&")[0]);
-        setToken(true);
-
-        localStorage.setItem("code", accountToken);
-        window.history.href = ""
-      }
-    }
-    else {
-      setToken(false);
-      localStorage.removeItem("code");
-    }
-  })
-
-
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
       <CssBaseline />
+
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -167,11 +144,9 @@ export default function DashboardPage(props) {
           <Button color="inherit" variant="outlined" className={classes.logoutButton} onClick={logout}>
             Logout
           </Button>
-          {checkToken ? <div></div> : <Button color="inherit" variant="outlined" className={classes.accountAuthButton} onClick={getAuthAccount}>
-            Link Account
-          </Button>}
         </Toolbar>
       </AppBar>
+
       <Drawer
         variant="permanent"
         classes={{
@@ -192,6 +167,7 @@ export default function DashboardPage(props) {
         <Divider />
         <List>{secondaryListItems}</List>
       </Drawer>
+
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
@@ -199,19 +175,17 @@ export default function DashboardPage(props) {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Chart />
               </Paper>
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <Deposits />
+                <Deposits></Deposits>
               </Paper>
             </Grid>
             {/* Recent Orders */}
             <Grid item xs={12}>
-              <Paper className={classes.paper}>
-                <Orders />
+              <Paper className={fixedHeightPaper}>
               </Paper>
             </Grid>
           </Grid>
